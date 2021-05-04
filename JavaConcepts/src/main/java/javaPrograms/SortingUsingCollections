@@ -36,5 +36,4 @@ public class SortingUsingCollection
 	    {
 			System.out.print(compName.get(i)+",");
 		}   
-	   }
-	}
+	   }}
