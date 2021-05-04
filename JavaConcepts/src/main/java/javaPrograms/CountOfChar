@@ -1,0 +1,39 @@
+package javaprograms;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class CountOfChar {
+
+	//private static final String Map = null;
+
+	public static void main(String[] args)
+	{
+		//Create a String with your name as value
+		String company="welcome to Selenium automation";
+		//Convert the string into a char array	
+		char[] chArray=company.toCharArray();
+		 System.out.print("Input :");
+		  System.out.print("welcome to Selenium automation");
+		//Create an empty Map<Character,Integer>
+		Map<Character,Integer> countChar =new HashMap<Character,Integer>();
+		//Iterate over the array and Check whether the Map contains the Character
+		
+		for(int i=0;i<chArray.length;i++)
+		{
+			if(countChar.containsKey(chArray[i]))
+			{
+
+				countChar.put(chArray[i],countChar.get(chArray[i])+1);
+			}			
+			else
+			{
+				countChar.put(chArray[i],1);
+			}
+			
+		}
+		//Print 
+		System.out.println();
+		System.out.print("OutPut : "+countChar);
+	}
+}
