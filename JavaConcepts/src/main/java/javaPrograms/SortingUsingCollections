@@ -1,0 +1,40 @@
+package javaprograms;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+//input = {"HCL","Wipro","Aspire Systems","CTS"};
+
+// Output: Wipro, HCL , CTS, Aspire Systems
+
+public class SortingUsingCollection 
+{
+	public static void main(String[] args) 
+	{
+		//Declare a String array and add the Strings values as (HCL, Wipro,  Aspire Systems, CTS)		
+	   ArrayList<String> compName=new ArrayList<String>();
+	   compName.add("HCL");
+	   compName.add("Wipro");
+	   compName.add("AspireSystems");
+	   compName.add("Cts");
+	 
+	   //get the length of the array
+	   System.out.println("Length of the Array :"+compName.size());	
+	   
+	   //Given array Display
+	   System.out.print("Input :");
+	   for(String cname: compName)
+	   {
+	     System.out.print(cname+","); 
+	   }
+	   //sort the array
+	   Collections.sort(compName);
+	  //Iterate it in the reverse order and Print array
+	  System.out.println();
+	  System.out.print("Output :");
+	  for (int i = compName.size() - 1; i >= 0 ; i--) 
+	    {
+			System.out.print(compName.get(i)+",");
+		}   
+	   }
+	}
