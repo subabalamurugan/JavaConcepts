@@ -35,5 +35,5 @@ public class CountOfChar {
 		//Print 
 		System.out.println();
 		System.out.print("OutPut : "+countChar);
-	}
-}
+	}}
+
