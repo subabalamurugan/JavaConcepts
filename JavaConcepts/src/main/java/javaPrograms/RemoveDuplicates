@@ -1,0 +1,30 @@
+package javaprograms;
+//Input  : "PayPal India"
+//Output :Payl Indi
+import java.util.HashSet;
+import java.util.Set;
+
+public class RemoveDuplicates {
+
+	public static void main(String[] args) 
+	{
+		//Declare a String as PayPal India
+		String compname="PayPal India";
+		//Convert it into a character array
+	   char[] charSet=compname.toCharArray();
+	   //Declare a Set as dupCharSet for duplicate Character
+	   System.out.print("Input:PayPal India ");
+	   Set<Character> dupCharSet=new HashSet<Character>();
+	   //Iterate character array and add it into charSet
+	   System.out.println();
+	   System.out.print("Output :");
+	   for(int i=0;i<charSet.length;i++)
+		   {
+		     if(dupCharSet.add(charSet[i]))
+		     {
+		    	 System.out.print(charSet[i]);
+		    	 
+		     }
+		   }
+	     }
+	   }
