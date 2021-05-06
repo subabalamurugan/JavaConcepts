@@ -9,9 +9,11 @@ public class ArmStrong {
 
 	public static void main(String[] args)
 	{
-		int s=0,a,t,n=153;
-		t=n;
-		System.out.println("Input : 153");
+		int s=0,a,t,n;	
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the Number : ");
+		n = sc.nextInt();
+		t=n;	
 		while(n>0)
 		{
 			a=n%10;
