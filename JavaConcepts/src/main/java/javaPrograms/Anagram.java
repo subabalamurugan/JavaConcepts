@@ -33,6 +33,4 @@ public class Anagram {
 		else
 			System.out.print(s1+" and "+s2+" are not anagram");
 
-	}
-
-}
+	}}
