@@ -10,8 +10,13 @@ public class Anagram {
 
 	public static void main(String[] args) 
 	{
-		String s1="stops";
-		String s2="potss";
+		String s1, s2;
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the string1 : ");
+		s1= sc.nextLine();
+		Scanner sc1 = new Scanner(System.in);
+		System.out.print("Enter the string2 : ");
+		s2 = sc1.nextLine();
 		boolean anagram;
 		if(s1.length()==s2.length())
 		{
