@@ -37,5 +37,4 @@ public class CountofAll
 	System.out.println("Consonants: " + consonants);
 	System.out.println("Digits: " + digits);
 	System.out.println("White spaces: " + spaces);
-	}
-	}
+	}}
