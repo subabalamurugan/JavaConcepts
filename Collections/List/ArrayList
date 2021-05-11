@@ -1,0 +1,122 @@
+
+package listExamples;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+public class ExampleOfArraylist {
+	public static void main(String[] args) 
+	{
+        List<String> arrlist=new ArrayList<String>();		
+		//add() used to add the specified element at the end of the List
+        arrlist.add("Selenium");
+		arrlist.add("Java");
+		arrlist.add("Dotnet");
+		arrlist.add("Drupal");
+		arrlist.add("Php");
+		arrlist.add("Javascript");
+		//add(int index, Object element) method will add at specified index position
+				arrlist.add(0,"Selenium");
+				System.out.println("Newly Added : "+arrlist);
+		//index
+				//to check the indexof any element
+				System.out.println("Index position of Dotnet is :"+arrlist.indexOf("Dotnet"));
+				//-1 is returned if the element is not there
+				System.out.println("Index position of DBMS is :"+arrlist.indexOf("DBMS"));
+				arrlist.add("Dotnet");
+				System.out.println("Newly Added : "+arrlist);
+				//indexof always returns the first occurrence
+				System.out.println("Index position of Dotnet is :"+arrlist.indexOf("Dotnet"));
+				//last index of is used to check the last occurence position
+				System.out.println("Last Index position ofDotnetis :"+arrlist.lastIndexOf("Dotnet"));
+
+
+				// Create another List2 of String type. 
+				   List<String> arrlist1 = new ArrayList<String>(); 
+				   arrlist1.add("HTML"); 
+				   arrlist1.add("CSS"); 		  
+				  System.out.println("List2 contain :-"+arrlist1); 
+
+				// Adding List2 in List1 at 2nd position(i.e index=2) using addAll() method. 
+				  arrlist.addAll(2, arrlist1); 
+				  System.out.println("List1 after adding List2 at 2nd position :-"+arrlist); 
+
+		      //set() is used to update the element based on index
+					arrlist.set(4, "SQL");
+					arrlist.set(5,"DBMS");
+					System.out.println("List after updating the last two elements : "+arrlist);
+
+				//remove(int position) removes the value at the specified position
+					arrlist.remove(3);
+					System.out.println("After removing using position :"+arrlist);
+
+				//remove using object value
+					arrlist.remove("Java");
+					System.out.println("After removing Array using object: "+ arrlist);
+					arrlist.add("Javascript");
+					System.out.println("Newly Array: "+arrlist);
+				    
+				/*get an element based on index position. 
+					If the index is not there we will get index out of bound exception*/
+					System.out.println("Element at 5th Position "+arrlist.get(4));
+					
+				//get all the elements in the list using for loop			
+					for(int size=0; size<arrlist.size();size++)
+					{
+						System.out.println("element at "+size+"th position " +arrlist.get(size));
+					}
+
+				//fetch using advanced for loop
+					for (String string : arrlist)
+					{
+						System.out.println("List elements "+string);
+					}	
+
+		
+		 //Sort 
+				System.out.println("After Sorting:");
+				Collections.sort(arrlist);
+				 for(String counter: arrlist)
+				   {
+						System.out.println(counter);
+				   }
+			  // Sorting in decreasing order
+				Collections.sort(arrlist, Collections.reverseOrder());
+				System.out.println("Descending Order:");
+				   for(String counter: arrlist)
+				   {
+						System.out.println(counter);
+					}
+		//forward traversing using ListIterator
+		    ListIterator<String> listIterator=arrlist.listIterator();
+			while(listIterator.hasNext())
+			{
+			  System.out.println("Forward Iteration : "+listIterator.next());
+			}
+		// reverse Iteration using ListIterator
+			while(listIterator.hasPrevious())
+			{
+			  System.out.println("Reverse Iteration : "+listIterator.previous());
+			}
+		/*Iteration with Iterator (NOTE: Not ListIterator)
+		 * Iterator can only traverse forward but not on reverse.
+			Hence we are using ListIterator for better usages.*/
+				Iterator< String> iterator=arrlist.iterator();
+				while(iterator.hasNext())
+				{
+					System.out.println("Forward Only:"+iterator.next());
+		        }
+				//clear to delete all the elements
+			    arrlist.clear();
+			    System.out.println("List after clearing "+arrlist);
+			//isEmpty() method to check the list is empty or not
+				System.out.println("This list is empty. True or False? "+ arrlist.isEmpty());
+				System.out.println(arrlist);
+
+	}
+}
+
+
+
+
