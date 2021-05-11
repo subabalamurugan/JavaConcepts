@@ -1,0 +1,70 @@
+package listExamples;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.ListIterator;
+public class ExampleOfLinkedList {
+
+	public static void main(String[] args)
+	{
+		/* Linked List Declaration */
+	       LinkedList<String> linkedlist = new LinkedList<String>();
+	   
+	    // Adding elements in the list. 
+	       linkedlist.add("Red"); 
+	       linkedlist.add("Yellow"); 
+	       linkedlist.add("Green"); 
+	       linkedlist.add("White"); 
+	       
+	    // Iterating using for loop. 
+	      System.out.println("**For loop**"); 
+	      for(int i = 0; i < linkedlist.size(); i++) 
+	      {
+	        Object element = linkedlist.get(i); // Return type of get() method is an Object. 
+	        System.out.println(element); 
+	    } 
+	    // Iterating using Advanced for loop. 
+	       System.out.println("**Advanced For loop**"); 
+	       for(String str: linkedlist) 
+	       { 
+	         System.out.println(str); 
+	       } 
+	    // Iterating using while loop. 
+	       System.out.println("**While Loop**"); 
+	       int num = 0; 
+	      while (linkedlist.size() > num) 
+	      { 
+	        System.out.println(linkedlist.get(num)); 
+	         num++; 
+	       } 
+	  
+	      // Iterating using Iterator. 
+	      System.out.println("**Using Iterator**"); 
+	      Iterator<String> itr = linkedlist.iterator(); 
+	     while(itr.hasNext())
+	     { 
+	      Object obj = itr.next(); 
+	      System.out.println(obj); 
+	      } 
+	     
+	     //ListIterator
+	     ListIterator<String> litr = linkedlist.listIterator(); 
+	     System.out.println("Interating in forward direction"); 
+	      while(litr.hasNext())
+	      { 
+	        Object obj = litr.next(); 
+	        System.out.println(obj); 
+	       } 
+	       System.out.println("Iterating in backwrd direction"); 
+	       while(litr.hasPrevious())
+	       { 
+	         Object obj = litr.previous(); 
+	         System.out.println(obj); 
+	         // linkedlist.add("Purple"); // It will throw Concurrent
+	             //Modification Exception because we cannot add or remove 
+	             //element in the LinkedList during iteration. 
+	        } 
+	       System.out.println(linkedlist); 
+	    }
+	
+	}
+
