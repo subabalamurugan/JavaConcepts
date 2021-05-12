@@ -65,6 +65,5 @@ public class ExampleOfLinkedList {
 	        } 
 	       System.out.println(linkedlist); 
 	    }
-	
 	}
 
